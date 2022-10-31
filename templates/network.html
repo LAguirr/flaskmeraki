@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Network: {{posts[0]['tags'][1]}}</h1>
+    <table>
+    {% for post in posts %}
+      {% if post['model'].startswith('MR') %}
+        <tr>
+          <td>Router</td><td><a href="{{ url_for('appliance', serial=post['serial']) }}">{{ post['serial'] }}</a></td>
+        </tr>
+      {% elif post['model'].startswith('MS')%}
+        <tr>
+          <td>Switch</td><td><a href="{{ url_for('switch', serial=post['serial']) }}">{{ post['serial'] }}</a></td>
+        </tr>
+      {% else %}
+        <tr>
+          <td>AP</td><td><a href="{{ url_for('access-point', serial=post['serial']) }}">{{ post['serial'] }}</a></td>
+        </tr>
+      {% endif %}
+        
+    {% endfor %}
+    </table>
+{% endblock %}
