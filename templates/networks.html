@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Networks {% endblock %}</h1><br>
+
+    {% for post in posts %}
+      <h2><a>{{ post['name'] }}</a></h2>
+    <hr>
+
+    {% endfor %}
+
+
+
+
+{% endblock %}

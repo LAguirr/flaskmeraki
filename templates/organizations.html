@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Organizations {% endblock %}</h1><br>
+
+    {% for post in posts %}
+      <h2><a href="{{ url_for('networks', id_organization=post['id']) }}">{{ post['name'] }}</a></h2>
+    <hr>
+
+    {% endfor %}
+
+
+
+
+{% endblock %}

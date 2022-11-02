@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Organizations {% endblock %}</h1>
+    <h1>{% block title %} Apikey Meraki {% endblock %}</h1>
+      
       <!--<p>from https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3 Step 7</p>-->
- 
-    {% for post in posts %}
-        
-        <h2><a href="{{ url_for('organization', id_organization=post['id']) }}">{{ post['tags'][1] }}</a></h2>
-    <hr>
-{% endfor %}
+<form method="post">        
+<p><input type='text'name='apikey'></p>
+<button class="btn btn-primary" type='submit'>Use</button>
+ </form>
+
+
 {% endblock %}
