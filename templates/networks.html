@@ -4,7 +4,7 @@
     <h1>{% block title %} Networks {% endblock %}</h1><br>
 
     {% for post in posts %}
-      <h2><a>{{ post['name'] }}</a></h2>
+      <h2><a href="{{ url_for('devices', id_network=post['id']) }}" >{{ post['name'] }}</a></h2>
     <hr>
 
     {% endfor %}

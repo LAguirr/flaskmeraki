@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Switch{% endblock %}
+{% block content %}
+  <h2>Switch</h2>
+  <table class='table'>
+    <tr>
+      <td>Port</td>
+      <td>Name</td>
+      <td>Vlan</td>
+      <td>Enabled</td>
+      <td>Link Negotiation</td>
+           
+    </tr>
+  {% for post in posts %}
+      <tr>
+          <td>{{post['portId']}}</td>
+          <td>{{ post['name'] }}</td>
+          <td>{{ post['vlan'] }}</td>
+          <td>{{ post['enabled'] }}</td>
+          <td>{{ post['linkNegotiation'] }}</td>
+           <td><button type="button" class="btn btn-outline-dark">Configure</button></td>
+          <td><button type="button" class="btn btn-outline-danger">Restart</button></td>
+        </tr>
+  {% endfor %}
+  </table>
+
+
+{% endblock %}

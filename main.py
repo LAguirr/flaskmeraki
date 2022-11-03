@@ -34,7 +34,7 @@ def devicesinnetwork(id_network):
     equipos = response.json()
     return equipos
 
-def puertos(serial):
+def ports(serial):
   response = requests.request('GET', url + 'devices/'+ serial +'/switch/ports', headers = headers)
   puertos = response.json()
   return puertos
@@ -62,5 +62,14 @@ def networks(id_organization):
   networks = networksbyorganization(id_organization)
   return render_template('networks.html', posts=networks)
 
+@app.route('/devices/<id_network>')
+def devices(id_network): 
+  devices = devicesinnetwork(id_network)
+  return render_template('devices.html', posts = devices)
+
+@app.route('/switch/<serial>')
+def switch(serial):
+  switchports = ports(serial)
+  return render_template('switch.html',posts = switchports)
 
 app.run(host='0.0.0.0', port=81)
