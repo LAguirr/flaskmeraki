@@ -6,7 +6,12 @@ The is all front end, the backend is the reponses from api meraki, don't save no
 
 For use it you can view it and run it in https://replit.com/@LeonelHernande4/flaskmeraki
 
+The only information of authentication that use is the apikey
+
 The app only use 
 python-versions = ">=3.6"
 Flask version = "2.2.2"
 request version = '2.28.1'
+
+
+THE APP IS NOT COMPLETE, BUT IT'S USEFUL IF YOU USE IT AND MODIFY IT FOR YOU OWN PROJECT, I hope beeing adding funcionalities for modify routers, switchs and AP's configuration
