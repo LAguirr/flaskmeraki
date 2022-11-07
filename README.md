@@ -6,7 +6,9 @@ The is all front end, the backend is the reponses from api meraki, don't save no
 
 For use it you can view it and run it in https://replit.com/@LeonelHernande4/flaskmeraki
 
-The only information of authentication that use is the apikey
+The only information of authentication that use is the apikey. For access to the API, first enable the API for your organization under Organization > Settings > Dashboard API access, you can follow the steps in the following link, but remember don't share the apikey, and change it frequently for more security
+https://documentation.meraki.com/General_Administration/Other_Topics/Cisco_Meraki_Dashboard_API
+
 
 The app only use 
 python-versions = ">=3.6"
