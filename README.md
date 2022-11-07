@@ -16,4 +16,4 @@ Flask version = "2.2.2"
 request version = '2.28.1'
 
 
-THE APP IS NOT COMPLETE, BUT IT'S USEFUL IF YOU USE IT AND MODIFY IT FOR YOU OWN PROJECT, I hope beeing adding funcionalities for modify routers, switchs and AP's configuration
+THE APP IS NOT COMPLETE, BUT IT'S USEFUL IF YOU USE IT AND MODIFY IT FOR YOUR OWN PROJECT, I hope beeing adding funcionalities for modify routers, switchs and AP's configuration
